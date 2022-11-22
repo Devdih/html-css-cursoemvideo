@@ -7,6 +7,7 @@
     <title>Background de maneira correta</title>
     <style>
         body {
+            /* Sem Shorthand */
             height: 100vh;
            background-color: black; 
            background-image: url(imagens/wallpaper002.jpg);
@@ -14,6 +15,16 @@
            background-repeat: no-repeat;
            background-size: cover;
            background-attachment: fixed;
+
+           /* Shorthand - background
+            COLOR > IMAGE > POSITION > REPEAT > [SIZE] > ATTACHMENT
+           */
+
+            background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed;
+
+            /* Ao fazer uma shorthand a w3c fala que dá porém não foi implementado, então precisa ser adicionado o background-size: cover abaixo */
+            
+            background-size: cover;
 
         }
         main {
